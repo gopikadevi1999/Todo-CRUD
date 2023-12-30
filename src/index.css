@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+    font-family: 'Merriweather', serif;
+    background-color: darkslategrey;
+    overflow-x: hidden;   
+}
+
+
+h3 {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    color: white;     
+}
+
+.row {
+    padding: 2%;
+    margin-left: 20%;
+}
+
+.row-text {
+    padding: 2%;
+}
+
+span {
+    color: white;
+}
+
+.todos {
+   margin-left: 5%;
+}
+
+.status {
+    margin-left: 68%;
+}
+
+.btn-group {
+    width: 10vw;
+}
+
+.edit {
+    padding: 1%;
+}
+
+.container1 {
+    margin-bottom: 5%;
+}
+
+.container {
+    margin-left: 1%;
+}
+
+.card {
+    background-color: cornflowerblue;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-body {
+    background-color: black;
+    color: white;
+}
+
+.card-title, .card-text, .select {
+    background-color: black;
+}

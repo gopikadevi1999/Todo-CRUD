@@ -1,0 +1,156 @@
+import React,{useState} from 'react'
+import From from './components/Todofrom'
+
+
+
+
+function App() {
+
+    const [data,setData] = useState([
+        {
+            id: 1,
+            todoname: "Office Task-1",
+            description: "This is the description for My First Task",
+            statusbar: false
+        },
+        {
+            id: 2,
+            todoname: "Office Task-2",
+            description: "This is the description for My Second Task",
+            statusbar: false
+        },
+        {
+            id: 3,
+            todoname: "Office Task-3",
+            description: "This is the description for My Third Task",
+            statusbar: false
+        }
+    ])
+
+
+
+    return <>
+        <From />
+        <Card />
+        
+
+    </>
+}
+
+export default App
+
+
+
+import React from 'react'
+
+
+
+function Todofrom() {
+    return <>
+        <h3>My Todo</h3>
+
+        <div className="row">
+            <div className="col">
+                <input type="text" className="form-control" placeholder="Todo Name" />
+            </div>
+            <div className="col">
+                <input type="text" className="form-control" placeholder="Todo Description" />
+            </div>
+            <div className="col">
+                <button type="button" className="btn btn-info">Add Todo</button>
+            </div>
+        </div>
+        <div className='row-text'>
+            <h5>My Todos</h5>
+            &nbsp;&nbsp;
+            <div className='status'>
+                <h5 >Status Filter :</h5>
+            </div>
+            &nbsp;&nbsp;
+
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">All</a></li>
+                    <li><a class="dropdown-item" href="#">Completed</a></li>
+                    <li><a class="dropdown-item" href="#">Not Completed</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </>
+}
+
+
+export default Todofrom
+
+
+
+import React from 'react'
+
+function Edit() {
+    return <>
+        <h3>Edit Todo</h3>
+        <div className="row">
+            <div className="col">
+                <input type="text" className="form-control" placeholder="Todo Name" />
+            </div>
+            <div className="col">
+                <input type="text" className="form-control" placeholder="Todo Description" />
+            </div>
+            <div className="col">
+                <button type="button" className="btn btn-info">Save changes</button>
+            </div>
+        </div>
+    </>
+}
+
+export default Edit
+
+
+
+import React from 'react'
+
+function Card() {
+    return <>
+        <div class="row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title">Name : </p>
+                        <p class="card-text">Description : </p>
+                        <span>Status : </span>&nbsp;
+                        <span>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Completed</a></li>
+                                    <li><a class="dropdown-item" href="#">Not Completed</a></li>
+                                </ul>
+                            </div>
+                        </span>
+                        <br />
+                        <br />
+                        <br />
+                        <button type="button" class="btn btn-primary">Edit</button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </>
+}
+
+export default Card
+
+
+<select class={`form-select form-select-sm ${getStatusColor(defaultStatus)}`} aria-label="Small select example">
+  <option  onClick={() => handleDrop(defaultStatus)}> {defaultStatus}</option>
+  <option  onClick={() => handleDrop('Completed')}>Completed</option>
+  <option  onClick={() => handleDrop('Not Completed')}>Not Completed</option>
+</select>
