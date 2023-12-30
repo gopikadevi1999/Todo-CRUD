@@ -58,5 +58,5 @@ span {
 
 .row-span {
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
 }
