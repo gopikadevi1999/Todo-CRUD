@@ -15,8 +15,10 @@ h3 {
 }
 
 .row {
+    display: flex;
+    justify-content: center;
     padding: 2%;
-    margin-left: 20%;
+    
 }
 
 .row-text {
@@ -27,14 +29,6 @@ span {
     color: white;
 }
 
-.todos {
-   margin-left: 5%;
-}
-
-.status {
-    margin-left: 68%;
-}
-
 .btn-group {
     width: 10vw;
 }
@@ -43,12 +37,8 @@ span {
     padding: 1%;
 }
 
-.container1 {
+.edittodo {
     margin-bottom: 5%;
-}
-
-.container {
-    margin-left: 1%;
 }
 
 .card {
@@ -64,4 +54,9 @@ span {
 
 .card-title, .card-text, .select {
     background-color: black;
+}
+
+.row-span {
+    display: flex;
+    justify-content: center;
 }

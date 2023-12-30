@@ -3,7 +3,7 @@ import React from 'react'
 function Edittodo({ title, setTitle, description, setDescription, onClick }) {
     return <>
         <h3 className='edit'>Edit Todo</h3>
-        <div className='container1'>
+        <div className='edittodo'>
             <div className="row">
                 <div className="col">
                     <input type="text" className="form-control" placeholder="Todo Name" value={title} onChange={() => { setTitle(e.target.value) }} />

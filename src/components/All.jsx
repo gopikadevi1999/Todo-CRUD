@@ -53,7 +53,7 @@ function All({ data, setData, completed, setCompleted }) {
     };
 
 
-    
+
 
     return <>
         <h3>My Todo</h3>
@@ -70,35 +70,30 @@ function All({ data, setData, completed, setCompleted }) {
             </div>
         </div>
         <div className='row-text'>
+            <div className="row-span">
+                <span className="todos">My Todos</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span className="status">Status Filter :</span>&nbsp;&nbsp;
+                
 
-            <span className="todos">My Todos</span>
-            <span className="status">Status Filter :</span>
-            &nbsp;&nbsp;
-
-            <div className="btn-group" onClick={handleDropdownClick}>
-                <button
-                    className={`btn btn-sm dropdown-toggle ${getStatusColor(defaultStatus)}`}
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    {completed}
-                </button>
-                <ul className="dropdown-menu">
-                    <li>
-                        <button className="btn btn-sm" onClick={() => handleDrop(defaultStatus)}>
-                            {defaultStatus}
-                        </button>
-                    </li>
-                    <li>
-                        <button className="btn btn-sm" onClick={() => handleDrop('Completed')}>
-                            Completed
-                        </button>
-                    </li>
-                    <li>
-                        <button className="btn btn-sm" onClick={() => handleDrop('Not Completed')}>
-                            Not Completed
-                        </button>
-                    </li>
-                </ul>
+                <div className="btn-group" onClick={handleDropdownClick}>
+                    <button
+                        className={`btn btn-sm dropdown-toggle ${getStatusColor(defaultStatus)}`}
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        {completed}
+                    </button>
+                    <ul className="dropdown-menu">
+                        <li className="btn btn-sm" onClick={() => handleDrop(defaultStatus)}>
+                                {defaultStatus}
+                        </li>
+                        <li  className="btn btn-sm" onClick={() => handleDrop('Completed')}>
+                                Completed
+                        </li>
+                        <li className="btn btn-sm" onClick={() => handleDrop('Not Completed')}>
+                                Not Completed
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div >
 
