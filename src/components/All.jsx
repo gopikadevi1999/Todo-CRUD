@@ -60,10 +60,10 @@ function All({ data, setData, completed, setCompleted }) {
 
         <div className="row">
             <div className="col">
-                <input type="text"  placeholder="Todo Name" value={title} onChange={() => { setTitle(e.target.value) }} />
+                <input type="text" className="form-control"  placeholder="Todo Name" value={title} onChange={(e) => { setTitle(e.target.value) }} />
             </div>
             <div className="col">
-                <input type="text"  placeholder="Todo Description" value={description} onChange={() => { setDescription(e.target.value) }} />
+                <input type="text" className="form-control" placeholder="Todo Description" value={description} onChange={(e) => { setDescription(e.target.value) }} />
             </div>
             <div className="col">
                 <button type="button" className="btn btn-info" onClick={handleClick}>Add Todo</button>
